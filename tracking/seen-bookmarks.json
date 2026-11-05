@@ -1,1 +1,12 @@
-{ "proposed": [], "approved": [], "skipped": [] }
+{
+  "proposed": [
+    {
+      "id": "2117367094249693472",
+      "title": "Kronos (candlestick foundation model)",
+      "url": "https://x.com/ludoonchart/status/2117367094249693472",
+      "date": "2026-11-04"
+    }
+  ],
+  "approved": [],
+  "skipped": []
+}
