@@ -5,8 +5,22 @@
       "title": "Kronos (candlestick foundation model)",
       "url": "https://x.com/ludoonchart/status/2117367094249693472",
       "date": "2026-11-04"
+    },
+    {
+      "id": "2117203560794591236",
+      "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
+      "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
+      "date": "2026-11-04"
     }
   ],
-  "approved": [],
+  "approved": [
+    {
+      "id": "2116270712390316375",
+      "title": "Remotion (React programmatic video)",
+      "url": "https://x.com/e1genqq/status/2116270712390316375",
+      "date": "2026-11-04",
+      "app": "apps/remotion-bookmark-reel"
+    }
+  ],
   "skipped": []
 }
