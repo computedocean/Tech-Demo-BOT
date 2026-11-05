@@ -1,5 +1,6 @@
 {
-  "proposed": [
+  "proposed": [],
+  "approved": [
     {
       "id": "2117367094249693472",
       "title": "Kronos (candlestick foundation model)",
@@ -7,6 +8,5 @@
       "date": "2026-11-04"
     }
   ],
-  "approved": [],
   "skipped": []
 }
