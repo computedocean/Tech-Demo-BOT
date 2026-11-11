@@ -29,12 +29,6 @@
       "title": "ReactDrops (Liquid Glass Orb / animated React components)",
       "url": "https://x.com/basit_designs/status/2119451556190044515",
       "date": "2026-11-09"
-    },
-    {
-      "id": "2119692969133400510",
-      "title": "ConnectOnion (one CLI to wire agents to email, browser, files, chat)",
-      "url": "https://x.com/DanKornas/status/2119692969133400510",
-      "date": "2026-11-11"
     }
   ],
   "approved": [
@@ -51,6 +45,13 @@
       "url": "https://x.com/Asteri_eth/status/2115496727893410053",
       "date": "2026-11-10",
       "app": "apps/motionclone-remix-studio"
+    },
+    {
+      "id": "2119692969133400510",
+      "title": "ConnectOnion (one CLI to wire agents to email, browser, files, chat)",
+      "url": "https://x.com/DanKornas/status/2119692969133400510",
+      "date": "2026-11-11",
+      "app": "apps/connectonion-switchboard"
     }
   ],
   "skipped": []
