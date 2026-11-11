@@ -1,0 +1,10 @@
+# Documented safe path. Creating, previewing, and reviewing a draft does not send.
+# This demo did not run these commands.
+
+co gmail draft create alice@example.com "Hello" "Thanks for the meeting today!"
+co gmail draft list
+co gmail draft preview <draft-id>
+co gmail draft review <draft-id> --json
+# The send step is separate. Piped yes cannot approve.
+# co gmail draft send <draft-id> --confirm <review-token> --json
+# co gmail send can send immediately. This demo never calls it.

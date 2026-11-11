@@ -1,0 +1,6 @@
+$ co linear issues -n 3
+3 open issues
+CON-3  Todo  No priority  -  2026-10-01  Import your data
+CON-1  Todo  No priority  -  2026-10-01  Get familiar with Linear
+CON-4  Todo  No priority  -  2026-10-01  Set up your teams
+Next: co linear issue CON-3

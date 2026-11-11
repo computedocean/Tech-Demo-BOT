@@ -1,0 +1,4 @@
+co outlook calendar create "Standup" 2026-09-10T09:00:00+10:00 2026-09-10T09:15:00+10:00
+# {"mode": "preview", "operation": "create", ...}
+# No changes made.
+# Next: co outlook calendar create Standup 2026-09-10T09:00:00+10:00 2026-09-10T09:15:00+10:00 --yes
