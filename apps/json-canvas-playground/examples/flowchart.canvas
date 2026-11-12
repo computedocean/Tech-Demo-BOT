@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "type": "text",
+      "text": "Start",
+      "x": 0,
+      "y": 120,
+      "width": 160,
+      "height": 72,
+      "color": "4"
+    },
+    {
+      "id": "draft",
+      "type": "text",
+      "text": "Draft nodes\nand edges",
+      "x": 240,
+      "y": 90,
+      "width": 210,
+      "height": 120
+    },
+    {
+      "id": "check",
+      "type": "text",
+      "text": "## Valid?\n\nStrict spec check before anything is saved.",
+      "x": 540,
+      "y": 70,
+      "width": 210,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "export",
+      "type": "text",
+      "text": "Export `.canvas`",
+      "x": 860,
+      "y": 0,
+      "width": 220,
+      "height": 100,
+      "color": "4"
+    },
+    {
+      "id": "errors",
+      "type": "text",
+      "text": "Show errors and keep the last valid canvas.",
+      "x": 860,
+      "y": 220,
+      "width": 240,
+      "height": 110,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "f1",
+      "fromNode": "start",
+      "fromSide": "right",
+      "toNode": "draft",
+      "toSide": "left"
+    },
+    {
+      "id": "f2",
+      "fromNode": "draft",
+      "fromSide": "right",
+      "toNode": "check",
+      "toSide": "left",
+      "label": "validate"
+    },
+    {
+      "id": "f3",
+      "fromNode": "check",
+      "fromSide": "top",
+      "toNode": "export",
+      "toSide": "left",
+      "color": "4",
+      "label": "yes"
+    },
+    {
+      "id": "f4",
+      "fromNode": "check",
+      "fromSide": "bottom",
+      "toNode": "errors",
+      "toSide": "left",
+      "color": "1",
+      "label": "no"
+    },
+    {
+      "id": "f5",
+      "fromNode": "errors",
+      "fromSide": "left",
+      "fromEnd": "arrow",
+      "toNode": "draft",
+      "toSide": "bottom",
+      "label": "revise"
+    }
+  ]
+}

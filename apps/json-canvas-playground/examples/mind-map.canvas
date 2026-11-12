@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "id": "center",
+      "type": "text",
+      "text": "# JSON Canvas\n\nA mind map stored as one JSON document.\n\nSpec 1.0 is the source of truth.",
+      "x": -170,
+      "y": -80,
+      "width": 340,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "format",
+      "type": "text",
+      "text": "## Document\n\n- `nodes` array\n- `edges` array\n- z-index is array order",
+      "x": -560,
+      "y": -230,
+      "width": 280,
+      "height": 160,
+      "color": "5"
+    },
+    {
+      "id": "kinds",
+      "type": "text",
+      "text": "## Node types\n\n- text — Markdown\n- file — path and subpath\n- link — URL\n- group — visual frame",
+      "x": 280,
+      "y": -260,
+      "width": 300,
+      "height": 210,
+      "color": "4"
+    },
+    {
+      "id": "connectors",
+      "type": "text",
+      "text": "## Edges\n\n- `fromSide` / `toSide`\n- `fromEnd` / `toEnd`\n- optional label",
+      "x": 280,
+      "y": 20,
+      "width": 300,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "notes",
+      "type": "file",
+      "file": "notes/spec-notes.md",
+      "subpath": "#color",
+      "x": -560,
+      "y": 20,
+      "width": 280,
+      "height": 120,
+      "color": "3"
+    },
+    {
+      "id": "spec",
+      "type": "link",
+      "url": "https://jsoncanvas.org/spec/1.0/",
+      "x": -170,
+      "y": 160,
+      "width": 340,
+      "height": 88,
+      "color": "#1d4ed8"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "center",
+      "fromSide": "left",
+      "toNode": "format",
+      "toSide": "right",
+      "label": "shape"
+    },
+    {
+      "id": "e2",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "kinds",
+      "toSide": "left",
+      "label": "types"
+    },
+    {
+      "id": "e3",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "connectors",
+      "toSide": "left",
+      "label": "links"
+    },
+    {
+      "id": "e4",
+      "fromNode": "center",
+      "fromSide": "bottom",
+      "toNode": "spec",
+      "toSide": "top",
+      "label": "read"
+    },
+    {
+      "id": "e5",
+      "fromNode": "format",
+      "fromSide": "bottom",
+      "fromEnd": "arrow",
+      "toNode": "notes",
+      "toSide": "top",
+      "label": "preset 3"
+    },
+    {
+      "id": "e6",
+      "fromNode": "notes",
+      "toNode": "spec",
+      "toEnd": "none"
+    }
+  ]
+}
