@@ -11,30 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2117234971735924856",
-      "title": "Busabase (open-source agent system of record)",
-      "url": "https://x.com/kellypeilinchan/status/2117234971735924856",
-      "date": "2026-11-05"
-    },
-    {
-      "id": "2118239590473666848",
-      "title": "mewo (animated React/shadcn component registry)",
-      "url": "https://x.com/csaba_kissi/status/2118239590473666848",
-      "date": "2026-11-06"
-    },
-    {
-      "id": "2119451556190044515",
-      "title": "ReactDrops (Liquid Glass Orb / animated React components)",
-      "url": "https://x.com/basit_designs/status/2119451556190044515",
-      "date": "2026-11-09"
-    },
-    {
-      "id": "2119855179973509344",
-      "title": "Jane Street socratic-tutor (agent skill)",
-      "url": "https://x.com/DaviddDotTech/status/2119855179973509344",
-      "date": "2026-11-12"
     }
   ],
   "approved": [
@@ -58,7 +34,34 @@
       "url": "https://x.com/DanKornas/status/2119692969133400510",
       "date": "2026-11-11",
       "app": "apps/connectonion-switchboard"
+    },
+    {
+      "id": "2118239590473666848",
+      "title": "mewo (animated React/shadcn component registry)",
+      "url": "https://x.com/csaba_kissi/status/2118239590473666848",
+      "date": "2026-11-06",
+      "app": "apps/mewo-motion-playground"
+    },
+    {
+      "id": "2119451556190044515",
+      "title": "ReactDrops (Liquid Glass Orb / animated React components)",
+      "url": "https://x.com/basit_designs/status/2119451556190044515",
+      "date": "2026-11-09",
+      "app": "apps/reactdrops-liquid-glass"
     }
   ],
-  "skipped": []
+  "skipped": [
+    {
+      "id": "2117234971735924856",
+      "title": "Busabase (open-source agent system of record)",
+      "url": "https://x.com/kellypeilinchan/status/2117234971735924856",
+      "date": "2026-11-05"
+    },
+    {
+      "id": "2119855179973509344",
+      "title": "Jane Street socratic-tutor (agent skill)",
+      "url": "https://x.com/DaviddDotTech/status/2119855179973509344",
+      "date": "2026-11-12"
+    }
+  ]
 }
