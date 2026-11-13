@@ -13,10 +13,10 @@
       "date": "2026-11-04"
     },
     {
-      "id": "2117788886940221821",
-      "title": "MiroFish (multi-agent prediction sandbox)",
-      "url": "https://x.com/51bodila/status/2117788886940221821",
-      "date": "2026-11-12"
+      "id": "2119325231026434464",
+      "title": "OpenBot (CopilotKit self-hostable AI coworker workspace)",
+      "url": "https://x.com/alanhoward/status/2119325231026434464",
+      "date": "2026-11-13"
     }
   ],
   "approved": [
@@ -82,6 +82,12 @@
       "id": "2119855179973509344",
       "title": "Jane Street socratic-tutor (agent skill)",
       "url": "https://x.com/DaviddDotTech/status/2119855179973509344",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "2117788886940221821",
+      "title": "MiroFish (multi-agent prediction sandbox)",
+      "url": "https://x.com/51bodila/status/2117788886940221821",
       "date": "2026-11-12"
     }
   ]
