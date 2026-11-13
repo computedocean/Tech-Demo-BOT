@@ -1,0 +1,10 @@
+# Recorded headless session shape. Direct calls run at once.
+# --yes is not a gate for go_to or get_text.
+# This app did not start Chrome or the co browser daemon.
+
+co browser --headless go_to https://example.com
+co browser --headless get_current_url
+https://example.com/
+
+co browser --headless get_text
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
