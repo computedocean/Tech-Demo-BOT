@@ -11,12 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2119325231026434464",
-      "title": "OpenBot (CopilotKit self-hostable AI coworker workspace)",
-      "url": "https://x.com/alanhoward/status/2119325231026434464",
-      "date": "2026-11-13"
     }
   ],
   "approved": [
@@ -68,7 +62,16 @@
       "title": "HYPER3D Rigging (prompt-editable auto-rig + animate API)",
       "url": "https://x.com/DeemosTech/status/2120192217482690735",
       "date": "2026-11-12",
-      "app": "apps/hyper3d-rig-lab"
+      "app": "apps/hyper3d-rig-lab",
+      "pr": 8,
+      "pr_state": "closed"
+    },
+    {
+      "id": "2119325231026434464",
+      "title": "OpenBot (CopilotKit self-hostable AI coworker workspace)",
+      "url": "https://x.com/alanhoward/status/2119325231026434464",
+      "date": "2026-11-13",
+      "app": "apps/openbot-coworker-desk"
     }
   ],
   "skipped": [
