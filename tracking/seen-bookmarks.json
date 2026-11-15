@@ -11,12 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2118247442969715052",
-      "title": "Mercury Agent (permission-hardened local agent + desktop, MIT)",
-      "url": "https://x.com/mercury__agent/status/2118247442969715052",
-      "date": "2026-11-05"
     }
   ],
   "approved": [
@@ -106,6 +100,12 @@
       "title": "MiroFish (multi-agent prediction sandbox)",
       "url": "https://x.com/51bodila/status/2117788886940221821",
       "date": "2026-11-12"
+    },
+    {
+      "id": "2118247442969715052",
+      "title": "Mercury Agent (permission-hardened local agent + desktop, MIT)",
+      "url": "https://x.com/mercury__agent/status/2118247442969715052",
+      "date": "2026-11-05"
     }
   ]
 }
