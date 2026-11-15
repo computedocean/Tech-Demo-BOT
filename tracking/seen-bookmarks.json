@@ -11,12 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2119913172677304408",
-      "title": "Hermes Agent (Nous Research self-improving agent: learning loop, skills, plugins)",
-      "url": "https://x.com/HermesWatcher/status/2119913172677304408",
-      "date": "2026-11-09"
     }
   ],
   "approved": [
@@ -112,6 +106,12 @@
       "title": "Mercury Agent (permission-hardened local agent + desktop, MIT)",
       "url": "https://x.com/mercury__agent/status/2118247442969715052",
       "date": "2026-11-05"
+    },
+    {
+      "id": "2119913172677304408",
+      "title": "Hermes Agent (Nous Research self-improving agent: learning loop, skills, plugins)",
+      "url": "https://x.com/HermesWatcher/status/2119913172677304408",
+      "date": "2026-11-09"
     }
   ]
 }
