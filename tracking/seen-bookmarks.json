@@ -80,6 +80,13 @@
       "date": "2026-11-13",
       "app": "apps/tradingkit-idea-lab",
       "pr": 10
+    },
+    {
+      "id": "2121662771565879334",
+      "title": "Parallax (open-source AI image, video and audio studio, MIT, mock-by-default)",
+      "url": "https://x.com/nickvasilescu/status/2121662771565879334",
+      "date": "2026-11-14",
+      "app": "apps/parallax-studio"
     }
   ],
   "skipped": [
