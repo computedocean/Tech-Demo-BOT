@@ -8,15 +8,9 @@
     },
     {
       "id": "2117203560794591236",
-      "title": "NVIDIA OpenShell (agent sandbox) — runner-up",
+      "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2121961437559980092",
-      "title": "Archify (natural language / codebase to interactive architecture diagrams, agent skill)",
-      "url": "https://x.com/tom_doerr/status/2121961437559980092",
-      "date": "2026-11-16"
     }
   ],
   "approved": [
@@ -93,6 +87,13 @@
       "url": "https://x.com/nickvasilescu/status/2121662771565879334",
       "date": "2026-11-14",
       "app": "apps/parallax-studio"
+    },
+    {
+      "id": "2121961437559980092",
+      "title": "Archify (natural language / codebase to interactive architecture diagrams, agent skill)",
+      "url": "https://x.com/tom_doerr/status/2121961437559980092",
+      "date": "2026-11-16",
+      "app": "apps/archify-diagram-studio"
     }
   ],
   "skipped": [
