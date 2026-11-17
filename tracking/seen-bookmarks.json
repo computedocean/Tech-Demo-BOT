@@ -8,7 +8,7 @@
     },
     {
       "id": "2117203560794591236",
-      "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
+      "title": "NVIDIA OpenShell (agent sandbox) — runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
     },
@@ -17,6 +17,12 @@
       "title": "LottieFiles motion-design-skill (universal motion principles for AI agents, MIT)",
       "url": "https://x.com/anstapnever/status/2121943855075635255",
       "date": "2026-11-15"
+    },
+    {
+      "id": "2122317784902234136",
+      "title": "NautilusTrader (Rust-core, Python-API event-driven backtest + live trading engine)",
+      "url": "https://x.com/quantscience_/status/2122317784902234136",
+      "date": "2026-11-17"
     }
   ],
   "approved": [
