@@ -8,21 +8,9 @@
     },
     {
       "id": "2117203560794591236",
-      "title": "NVIDIA OpenShell (agent sandbox) — runner-up",
+      "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2121943855075635255",
-      "title": "LottieFiles motion-design-skill (universal motion principles for AI agents, MIT)",
-      "url": "https://x.com/anstapnever/status/2121943855075635255",
-      "date": "2026-11-15"
-    },
-    {
-      "id": "2122317784902234136",
-      "title": "NautilusTrader (Rust-core, Python-API event-driven backtest + live trading engine)",
-      "url": "https://x.com/quantscience_/status/2122317784902234136",
-      "date": "2026-11-17"
     }
   ],
   "approved": [
@@ -106,6 +94,20 @@
       "url": "https://x.com/tom_doerr/status/2121961437559980092",
       "date": "2026-11-16",
       "app": "apps/archify-diagram-studio"
+    },
+    {
+      "id": "2122317784902234136",
+      "title": "NautilusTrader (Rust-core, Python-API event-driven backtest + live trading engine)",
+      "url": "https://x.com/quantscience_/status/2122317784902234136",
+      "date": "2026-11-17",
+      "app": "apps/nautilus-backtest-lab"
+    },
+    {
+      "id": "2121943855075635255",
+      "title": "LottieFiles motion-design-skill (universal motion principles for AI agents, MIT)",
+      "url": "https://x.com/anstapnever/status/2121943855075635255",
+      "date": "2026-11-15",
+      "app": "apps/lottie-motion-lab"
     }
   ],
   "skipped": [
