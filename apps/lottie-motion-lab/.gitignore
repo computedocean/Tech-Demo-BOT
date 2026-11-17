@@ -1,0 +1,12 @@
+node_modules
+dist
+.vite
+.env
+.env.local
+playwright-report
+test-results
+blob-report
+capture-output
+*.tsbuildinfo
+*.mp4
+*.webm
