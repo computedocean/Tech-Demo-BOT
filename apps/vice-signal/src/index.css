@@ -1,0 +1,447 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource/bebas-neue";
+@import "@fontsource-variable/space-grotesk";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-sans: "Space Grotesk Variable", "Space Grotesk", sans-serif;
+  --font-mono: "Space Grotesk Variable", "Space Grotesk", sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #041820;
+  --foreground: #f2ece4;
+  --card: #0a222c;
+  --card-foreground: #f2ece4;
+  --popover: #0a222c;
+  --popover-foreground: #f2ece4;
+  --primary: #f2ece4;
+  --primary-foreground: #041820;
+  --secondary: #123038;
+  --secondary-foreground: #f2ece4;
+  --muted: #123038;
+  --muted-foreground: #b8c4c0;
+  --accent: #123038;
+  --accent-foreground: #f2ece4;
+  --destructive: oklch(0.65 0.2 25);
+  --border: color-mix(in oklab, var(--neon, #5eead4) 28%, transparent);
+  --input: color-mix(in oklab, var(--neon, #5eead4) 22%, transparent);
+  --ring: var(--neon, #5eead4);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.35rem;
+  --sidebar: #0a222c;
+  --sidebar-foreground: #f2ece4;
+  --sidebar-primary: #f2ece4;
+  --sidebar-primary-foreground: #041820;
+  --sidebar-accent: #123038;
+  --sidebar-accent-foreground: #f2ece4;
+  --sidebar-border: color-mix(in oklab, #5eead4 20%, transparent);
+  --sidebar-ring: #5eead4;
+  --neon: #5eead4;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ——— Stage ——— */
+.stage {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  width: 100%;
+  overflow-x: clip;
+  color: #f2ece4;
+  --neon: #5eead4;
+}
+
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.haze {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.drift {
+  position: absolute;
+  inset: -10% -20%;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.signal-ring {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: min(72vw, 560px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border: 1px solid;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.skyline-plane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(160px, 34vh, 280px);
+  pointer-events: none;
+}
+
+.skyline {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ——— Hero composition ——— */
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 100svh;
+  padding: clamp(1rem, 3.5vw, 2.75rem);
+  padding-bottom: clamp(1.25rem, 4vh, 2rem);
+  max-width: 1100px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.brand-block {
+  max-width: min(34rem, 100%);
+  padding-top: clamp(0.25rem, 1.5vh, 1.25rem);
+}
+
+.brand {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-size: clamp(3.25rem, 14vw, 7.75rem);
+  line-height: 0.84;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f7f1e8;
+  text-shadow:
+    0 0 0.05em color-mix(in oklab, var(--neon) 55%, transparent),
+    0 0.04em 0 color-mix(in oklab, #000 35%, transparent);
+}
+
+.brand span {
+  display: block;
+}
+
+.headline {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 3.6vw, 2.35rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.05;
+  color: color-mix(in oklab, #fff 88%, var(--neon));
+}
+
+.lede {
+  margin: 0.75rem 0 0;
+  max-width: 28rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.45;
+  color: color-mix(in oklab, #f2ece4 72%, transparent);
+}
+
+/* ——— Tuner ——— */
+.tuner {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 42rem);
+  margin-top: auto;
+  padding-bottom: clamp(0.25rem, 2vh, 1rem);
+}
+
+.tuner-stations {
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding-bottom: 0.15rem;
+  scrollbar-width: thin;
+}
+
+.station-btn {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 0.15rem;
+  min-width: 7.25rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid color-mix(in oklab, #f2ece4 18%, transparent);
+  background: color-mix(in oklab, #041820 55%, transparent);
+  color: #f2ece4;
+  text-align: left;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.station-btn:hover {
+  border-color: color-mix(in oklab, var(--neon) 55%, transparent);
+}
+
+.station-btn.is-active {
+  border-color: var(--neon);
+  background: color-mix(in oklab, var(--neon) 14%, #041820);
+  box-shadow: inset 0 -2px 0 var(--neon);
+}
+
+.station-freq {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--neon);
+}
+
+.station-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.dial {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.85rem 0 0.25rem;
+  border-top: 1px solid color-mix(in oklab, #f2ece4 16%, transparent);
+}
+
+.dial-meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dial-tag {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--neon) 80%, #fff);
+}
+
+.dial-title {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.dial-hz {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  color: var(--neon);
+}
+
+.dial-hz span {
+  font-size: 0.35em;
+  letter-spacing: 0.12em;
+  margin-left: 0.2em;
+  opacity: 0.75;
+}
+
+.dial-track {
+  position: relative;
+  padding-top: 0.85rem;
+}
+
+.dial-marks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 0.85rem;
+  margin-bottom: 0.35rem;
+  pointer-events: none;
+}
+
+.mark {
+  width: 1px;
+  height: 0.35rem;
+  background: color-mix(in oklab, #f2ece4 28%, transparent);
+}
+
+.mark.major {
+  height: 0.7rem;
+  background: color-mix(in oklab, var(--neon) 65%, #f2ece4);
+}
+
+.dial-needle {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 0.85rem;
+  margin-left: -1px;
+  background: var(--neon);
+  box-shadow: 0 0 10px color-mix(in oklab, var(--neon) 70%, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dial-slider {
+  width: 100%;
+}
+
+.dial-slider [data-slot="slider-track"],
+.dial-slider span[data-orientation="horizontal"]:first-child {
+  background: color-mix(in oklab, #f2ece4 18%, transparent) !important;
+  height: 3px !important;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 100svh;
+    gap: 1.25rem;
+    padding-inline: 1rem;
+  }
+
+  .brand {
+    font-size: clamp(3rem, 22vw, 4.75rem);
+  }
+
+  .headline {
+    font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+    max-width: 16ch;
+  }
+
+  .lede {
+    font-size: 0.92rem;
+    max-width: 28ch;
+  }
+
+  .tuner {
+    width: 100%;
+  }
+
+  .tuner-stations {
+    margin-inline: -0.15rem;
+    padding-inline: 0.15rem;
+  }
+
+  .station-btn {
+    min-width: 6.35rem;
+  }
+
+  .dial-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dial-hz {
+    font-size: clamp(2.1rem, 14vw, 2.8rem);
+  }
+
+  .signal-ring {
+    top: 46%;
+    width: min(88vw, 380px);
+  }
+
+  .skyline-plane {
+    height: clamp(130px, 28vh, 200px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drift,
+  .signal-ring {
+    animation: none !important;
+  }
+}
