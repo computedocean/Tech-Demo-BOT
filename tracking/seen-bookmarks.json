@@ -11,12 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2121268300499874190",
-      "title": "REA / Reverse Engineer Anything (morluto/rea: agent CLI + MCP for reverse engineering, MIT)",
-      "url": "https://x.com/ArchiveExplorer/status/2121268300499874190",
-      "date": "2026-11-18"
     }
   ],
   "approved": [
@@ -146,6 +140,12 @@
       "title": "Hermes Agent (Nous Research self-improving agent: learning loop, skills, plugins)",
       "url": "https://x.com/HermesWatcher/status/2119913172677304408",
       "date": "2026-11-09"
+    },
+    {
+      "id": "2121268300499874190",
+      "title": "REA / Reverse Engineer Anything (morluto/rea: agent CLI + MCP for reverse engineering, MIT)",
+      "url": "https://x.com/ArchiveExplorer/status/2121268300499874190",
+      "date": "2026-11-18"
     }
   ]
 }
