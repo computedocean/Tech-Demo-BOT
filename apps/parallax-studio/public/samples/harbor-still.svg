@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b2433"/>
+      <stop offset="48%" stop-color="#3c4d68"/>
+      <stop offset="100%" stop-color="#e8b48c"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243648"/>
+      <stop offset="100%" stop-color="#121a24"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#sky)"/>
+  <circle cx="690" cy="238" r="58" fill="#f4d3b2"/>
+  <circle cx="690" cy="238" r="40" fill="#f7e2cc" opacity="0.85"/>
+  <g fill="#15202b">
+    <rect x="40" y="248" width="36" height="54"/>
+    <rect x="86" y="220" width="28" height="82"/>
+    <rect x="122" y="236" width="48" height="66"/>
+    <rect x="178" y="206" width="22" height="96"/>
+    <rect x="208" y="228" width="40" height="74"/>
+    <rect x="820" y="232" width="30" height="70"/>
+    <rect x="858" y="214" width="22" height="88"/>
+    <rect x="888" y="242" width="40" height="60"/>
+  </g>
+  <rect y="300" width="960" height="240" fill="url(#water)"/>
+  <rect y="298" width="960" height="3" fill="#f6e4d4" opacity="0.8"/>
+  <g fill="#d5e2ee">
+    <rect x="70" y="348" width="180" height="3" opacity="0.45"/>
+    <rect x="300" y="372" width="120" height="2" opacity="0.3"/>
+    <rect x="520" y="390" width="260" height="3" opacity="0.4"/>
+    <rect x="160" y="430" width="200" height="2" opacity="0.28"/>
+    <rect x="640" y="460" width="160" height="3" opacity="0.35"/>
+  </g>
+  <g fill="#1a140f">
+    <rect x="250" y="292" width="210" height="8"/>
+    <rect x="268" y="300" width="10" height="70"/>
+    <rect x="430" y="300" width="10" height="78"/>
+  </g>
+  <path d="M470 312 L575 312 L552 342 L492 342 Z" fill="#10151c"/>
+  <rect x="516" y="268" width="4" height="46" fill="#10151c"/>
+  <path d="M520 272 L572 306 L520 306 Z" fill="#f3eadf"/>
+  <path d="M300 328 L392 328 L374 350 L318 350 Z" fill="#0e131a"/>
+  <g font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect x="36" y="32" width="148" height="40" rx="8" fill="#f7f4ef"/>
+    <text x="54" y="58" font-size="18" font-weight="700" letter-spacing="3" fill="#1c2433">SAMPLE</text>
+    <text x="36" y="508" font-size="15" fill="#f4ece4">Synthetic still · bundled sample</text>
+  </g>
+</svg>
