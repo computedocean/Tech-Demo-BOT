@@ -1,0 +1,19 @@
+Synthetic placeholder clips
+==========================
+
+Files:
+- harbor-cruise.mp4
+- rooftop-hop.mp4
+- lane-chase.mp4
+- grid-pass.mp4
+
+How they were made:
+scripts/render-placeholders.sh builds each file with ffmpeg from lavfi color
+sources and the overlay filter. Shapes move with per-frame expressions.
+There is no recorded footage, no audio, and no third-party video.
+
+License:
+CC0 1.0 Universal. The demo author dedicates these placeholders to the public domain.
+They are original synthetic graphics, not game footage, and not from any publisher.
+
+Do not replace them with copyrighted game assets.
