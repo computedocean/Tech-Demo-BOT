@@ -123,6 +123,13 @@
       "date": "2026-11-19",
       "app": "apps/gta6-clip-desk",
       "note": "user-requested via link, inspiration only"
+    },
+    {
+      "id": "2121948225020023120",
+      "title": "Pathwarden (open-source AD/Entra attack-path management, Apache-2.0)",
+      "url": "https://x.com/g0h4n_0/status/2121948225020023120",
+      "date": "2026-11-20",
+      "app": "apps/pathwarden-path-desk"
     }
   ],
   "skipped": [
