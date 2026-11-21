@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "version": 6,
+    "type": "mixed",
+    "count": 5
+  },
+  "data": [
+    {
+      "ObjectIdentifier": "U-ALICE",
+      "Properties": {
+        "name": "ALICE@EXAMPLE.LAB",
+        "domain": "EXAMPLE.LAB",
+        "highvalue": false
+      },
+      "Aces": [
+        {
+          "RightName": "Owns",
+          "PrincipalSID": "U-ALICE",
+          "PrincipalType": "User"
+        }
+      ]
+    },
+    {
+      "ObjectIdentifier": "U-BOB",
+      "Properties": {
+        "name": "BOB@EXAMPLE.LAB",
+        "domain": "EXAMPLE.LAB",
+        "highvalue": false
+      }
+    },
+    {
+      "ObjectIdentifier": "G-HELP",
+      "Properties": {
+        "name": "HELP@EXAMPLE.LAB",
+        "domain": "EXAMPLE.LAB",
+        "highvalue": false
+      },
+      "Members": [
+        { "ObjectIdentifier": "U-BOB", "ObjectType": "User" },
+        { "ObjectIdentifier": "U-MISSING", "ObjectType": "User" }
+      ]
+    },
+    {
+      "ObjectIdentifier": "G-DA",
+      "Properties": {
+        "name": "DOMAIN ADMINS@EXAMPLE.LAB",
+        "domain": "EXAMPLE.LAB",
+        "highvalue": true
+      },
+      "Aces": [
+        {
+          "RightName": "GenericAll",
+          "PrincipalSID": "G-HELP",
+          "PrincipalType": "Group"
+        }
+      ]
+    },
+    {
+      "ObjectIdentifier": "C-DC",
+      "Properties": {
+        "name": "DC01.EXAMPLE.LAB",
+        "domain": "EXAMPLE.LAB",
+        "highvalue": true
+      },
+      "LocalAdmins": {
+        "Results": [{ "ObjectIdentifier": "U-ALICE", "ObjectType": "User" }]
+      },
+      "Sessions": {
+        "Results": [{ "UserSID": "U-ALICE", "ComputerSID": "C-DC" }]
+      }
+    }
+  ]
+}
