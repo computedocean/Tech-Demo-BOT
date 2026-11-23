@@ -11,12 +11,6 @@
       "title": "NVIDIA OpenShell (agent sandbox) \u2014 runner-up",
       "url": "https://x.com/thisdudelikesAI/status/2117203560794591236",
       "date": "2026-11-04"
-    },
-    {
-      "id": "2124170727473500234",
-      "title": "ffmpeg-skill (kajisho5/ffmpeg-skill: 42 FFmpeg tools + MCP server for coding agents, MIT)",
-      "url": "https://x.com/gippp69/status/2124170727473500234",
-      "date": "2026-11-23"
     }
   ],
   "approved": [
@@ -136,6 +130,13 @@
       "url": "https://x.com/g0h4n_0/status/2121948225020023120",
       "date": "2026-11-20",
       "app": "apps/pathwarden-path-desk"
+    },
+    {
+      "id": "2124170727473500234",
+      "title": "ffmpeg-skill (kajisho5/ffmpeg-skill: 42 FFmpeg tools + MCP server for coding agents, MIT)",
+      "url": "https://x.com/gippp69/status/2124170727473500234",
+      "date": "2026-11-23",
+      "app": "apps/ffmpeg-skill-cutroom"
     }
   ],
   "skipped": [
