@@ -4,6 +4,7 @@ import { generateCaptionVariants, parseHashtagInput } from '../domain/captions.t
 import { CLIP_TAGS } from '../domain/clips.ts'
 import type { ClipDraft } from '../domain/desk.ts'
 import type { DeskAction } from '../domain/desk.ts'
+import type { HookTemplate } from '../domain/hooks.ts'
 import { requestServerRewrite } from '../lib/rewrite-client.ts'
 import { Badge } from './ui/badge.tsx'
 import { Button } from './ui/button.tsx'
@@ -14,12 +15,13 @@ import { Textarea } from './ui/textarea.tsx'
 
 type CaptionPanelProps = {
   draft: ClipDraft
+  hooks: readonly HookTemplate[]
   dispatch: (action: DeskAction) => void
 }
 
-export function CaptionPanel({ draft, dispatch }: CaptionPanelProps) {
+export function CaptionPanel({ draft, hooks, dispatch }: CaptionPanelProps) {
   const [pending, setPending] = useState(false)
-  const variants = generateCaptionVariants({ title: draft.title, tags: draft.tags })
+  const variants = generateCaptionVariants({ title: draft.title, tags: draft.tags, hooks })
 
   async function rewrite() {
     setPending(true)

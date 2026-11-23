@@ -8,7 +8,8 @@ export function DeskFooter() {
         Clip desk is an independent local planner. It is not affiliated with Rockstar Games, it is not an
         official GTA 6 product, and it does not post anywhere. Analytics are simulated. Bundled clips are
         synthetic placeholders, not game footage. Placeholder video is generated with ffmpeg from flat colors
-        and dedicated CC0. See public/clips/SOURCE.txt.
+        and dedicated CC0. See public/clips/SOURCE.txt. Campaign pay, view counts, and earnings in clipping jobs
+        are simulated sample figures for planning, not a payment and not a forecast.
       </p>
     </footer>
   )

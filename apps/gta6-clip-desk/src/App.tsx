@@ -1,4 +1,5 @@
 import { ClipLibrary } from './components/clip-library.tsx'
+import { JobsSection } from './components/jobs-section.tsx'
 import { TrimPanel } from './components/trim-panel.tsx'
 import { CaptionPanel } from './components/caption-panel.tsx'
 import { PhonePreview } from './components/phone-preview.tsx'
@@ -28,11 +29,14 @@ export default function App() {
             <div>
               <p className="text-[11px] tracking-[0.16em] text-muted-foreground uppercase">Local planner</p>
               <h1 className="text-xl font-medium tracking-tight">Clip desk</h1>
+              <a href="#clipping-jobs" data-testid="jump-jobs" className="text-sm underline underline-offset-4">
+                Clipping jobs
+              </a>
             </div>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
             Plan a GTA 6 clip page on this machine: library, trim, mock captions, a 9:16 preview, and a weekly
-            queue. Nothing here is published.
+            queue. Nothing here is published. Sample clipping jobs, with simulated payouts, sit further down.
           </p>
         </div>
       </header>
@@ -56,7 +60,7 @@ export default function App() {
               draft={draft}
               onTrim={(trimIn, trimOut) => dispatch({ type: 'setTrim', trimIn, trimOut })}
             />
-            <CaptionPanel draft={draft} dispatch={dispatch} />
+            <CaptionPanel draft={draft} hooks={state.jobs.hooks} dispatch={dispatch} />
             <div>
               <Button type="button" data-testid="add-to-queue" onClick={() => dispatch({ type: 'enqueue' })}>
                 Add this cut to the week
@@ -82,6 +86,7 @@ export default function App() {
           onRemove={(itemId) => dispatch({ type: 'removeQueueItem', itemId })}
           onRestore={() => dispatch({ type: 'restoreExample' })}
         />
+        <JobsSection state={state} dispatch={dispatch} />
       </main>
       <DeskFooter />
     </div>

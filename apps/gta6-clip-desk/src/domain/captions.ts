@@ -1,3 +1,5 @@
+import { DEFAULT_HOOK_BANK, renderHookPattern, type HookTemplate } from './hooks.ts'
+
 export type CaptionVariant = {
   id: string
   label: string
@@ -42,46 +44,35 @@ export function hashtagsFor(tags: readonly string[], variantIndex: number): stri
   return unique(rotated).slice(0, 6)
 }
 
+function captionBody(index: number, title: string, line: string, tagList: string): string {
+  const bodies = [
+    `${line} ${title} is the vertical cut.`,
+    `${line} Tags on this cut: ${tagList}.`,
+    `${line} No voiceover on the placeholder.`,
+    line,
+  ]
+  return bodies[index % bodies.length] ?? line
+}
+
 export function generateCaptionVariants(input: {
   title: string
   tags: readonly string[]
+  hooks?: readonly HookTemplate[]
 }): CaptionVariant[] {
   const title = input.title.trim() || 'Untitled cut'
   const tags = input.tags.map((tag) => tag.trim()).filter(Boolean)
   const lead = leadTag(tags)
   const line = TAG_LINES[lead] ?? TAG_LINES.city
   const tagList = tags.length > 0 ? tags.join(', ') : 'untagged'
+  const hooks = input.hooks && input.hooks.length > 0 ? input.hooks : DEFAULT_HOOK_BANK
 
-  return [
-    {
-      id: 'cold-open',
-      label: 'Cold open',
-      hook: `Stay for the last beat of ${title}.`,
-      caption: `${line} ${title} is the vertical cut.`,
-      hashtags: hashtagsFor(tags, 0),
-    },
-    {
-      id: 'question',
-      label: 'Question',
-      hook: `Would you post ${title} like this?`,
-      caption: `${line} Tags on this cut: ${tagList}.`,
-      hashtags: hashtagsFor(tags, 1),
-    },
-    {
-      id: 'beat',
-      label: 'Beat',
-      hook: `Three seconds, then ${title}.`,
-      caption: `${line} No voiceover on the placeholder.`,
-      hashtags: hashtagsFor(tags, 2),
-    },
-    {
-      id: 'quiet',
-      label: 'Quiet',
-      hook: title,
-      caption: line,
-      hashtags: hashtagsFor(tags, 3),
-    },
-  ]
+  return hooks.map((hook, index) => ({
+    id: hook.id,
+    label: hook.label,
+    hook: renderHookPattern(hook.pattern, title),
+    caption: captionBody(index, title, line, tagList),
+    hashtags: hashtagsFor(tags, index),
+  }))
 }
 
 export function parseHashtagInput(value: string): string[] {

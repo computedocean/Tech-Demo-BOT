@@ -63,3 +63,26 @@ This app is original work in the monorepo. Bundled clips and graphics must be or
 ## Source
 Inspiration only (do not fetch or reuse post media): https://x.com/Bober_smart/status/2123405770339369124  
 Note: user-requested via link, inspiration only.
+
+## Upgrade 2: clipping jobs
+
+### Goal
+Add a fully offline clipping-job workflow to the existing desk: sample campaign rules, a simulated payout calculator, a per-clip checklist that blocks “ready”, an editable hook bank for the caption generator, and a view tracker with template reports.
+
+### Single-user slice
+Everything below stays inside `apps/gta6-clip-desk/`. Existing library, trim, captions, 9:16 preview, week queue, simulated analytics, export, footer disclaimers, and the optional server-only rewrite (off by default) keep working.
+
+1. **Campaign scoreboard.** Three bundled sample campaigns with invented streamer names and generic names. Each card shows pay per 1K, budget left, minimum views, allowed platforms, the allowed-streamer list, required hashtags and mentions, clip length range, and banned content. Cards are ranked by pay per 1K, then budget left. A forgiving line parser accepts pasted rules (`Label: value`, `=`, or ` - `, plus bullet lists) and fills a structured form the user can edit before adding another sample campaign. Parsed and bundled campaigns are labeled Sample. No live listings, no scraping, no Whop API.
+2. **Payout calculator.** `views × pay per 1K`, gated to $0 under the campaign minimum, then capped by budget left. Per-clip result and a week total that spends the shared budget in queue order. Every figure is labeled Simulated.
+3. **Rule checklist** on the selected queued clip. Pass/fail for length inside the campaign range, 9:16 aspect, platform specs (TikTok, Reels, Shorts, and X at 1080×1920 with length windows 3–60s, 3–90s, 1–60s, and 2–140s), required hashtags and mentions in the queued caption or hashtag fields, streamer on the allowed list, no duplicate of the same clip on one account, and a manual content-policy tick. “Mark clip ready” stays disabled while any check fails. The reducer enforces the same gate.
+4. **Hook bank.** The four existing caption hooks become editable `{title}` templates. Generate and apply still use the offline caption generator, now fed by that list. Default templates keep the original hook sentences.
+5. **View tracker.** Day-1 and day-3 views per queued clip, entered by hand or filled by a deterministic seeded model. Export CSV with the header `date,clip,platform,hook,views,paid` and the same rows as JSON. A nightly report (clips posted, top 3, total views, simulated earnings, what to change) and a Friday best-titles summary are template text from tracker data. No model key.
+
+### Explicitly still out
+Real posting, OAuth, stream downloads, scraping, game footage, Rockstar assets, revenue promises, and any earnings figure that is not marked Simulated. No new repo, no deploy, no files outside this app.
+
+### Tests
+`bun test` adds coverage for campaign ranking, rule-text parsing, payout math with the minimum-view gate and budget cap, each checklist rule, duplicate detection, tracker CSV columns, and both reports. Previous desk tests stay in place.
+
+### Stack
+Same Bun, Vite, React, TypeScript, and shadcn UI. New behavior is plain TypeScript in `src/domain/` plus sections on the existing page. No new network calls.

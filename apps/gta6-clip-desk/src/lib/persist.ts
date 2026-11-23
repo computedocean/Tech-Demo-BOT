@@ -35,6 +35,7 @@ export function loadPlan(): PersistedPlan | null {
       drafts: parsed.drafts,
       queue,
       selectedQueueId: typeof parsed.selectedQueueId === 'string' ? parsed.selectedQueueId : null,
+      jobs: parsed.jobs,
     }
   } catch {
     return null
@@ -49,6 +50,7 @@ export function savePlan(state: DeskState): void {
     drafts: state.drafts,
     queue: state.queue,
     selectedQueueId: state.selectedQueueId,
+    jobs: state.jobs,
   }
   localStorage.setItem(KEY, JSON.stringify(plan))
 }
