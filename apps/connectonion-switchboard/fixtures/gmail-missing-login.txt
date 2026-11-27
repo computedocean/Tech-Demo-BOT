@@ -1,0 +1,3 @@
+co gmail
+# Connect Gmail first:
+# Next: co auth google
