@@ -1,0 +1,16 @@
+node_modules
+dist
+dist-ssr
+.vite
+.env
+.env.*
+!.env.example
+out/
+test-results/
+playwright-report/
+blob-report/
+*.local
+*.mp4
+*.webm
+*.mov
+.DS_Store
