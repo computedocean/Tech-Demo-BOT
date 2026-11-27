@@ -1,0 +1,119 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  container-type: size;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.stage-ring {
+  position: absolute;
+  top: 11%;
+  right: 6%;
+  width: 24%;
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+.stage-skyline {
+  position: absolute;
+  left: 58%;
+  bottom: 16%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.35cqw;
+  height: 48%;
+}
+
+.stage-bar {
+  width: 1.7cqw;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  border-radius: 1px 1px 0 0;
+  background: var(--signal);
+}
+
+.stage-bar-a {
+  height: 68%;
+}
+
+.stage-bar-b {
+  height: 100%;
+  opacity: 0.9;
+}
+
+.stage-bar-c {
+  height: 76%;
+  opacity: 0.68;
+}
+
+.stage-ground {
+  position: absolute;
+  left: 7%;
+  bottom: 14.5%;
+  width: 34%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--signal);
+}
+
+.stage-copy {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  width: 50%;
+}
+
+.stage-kicker {
+  display: block;
+  overflow: hidden;
+  font-family: "Geist Variable", sans-serif;
+  font-size: 1.45cqw;
+  font-weight: 560;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.stage-rule {
+  display: block;
+  width: 16cqw;
+  height: 2px;
+  margin-top: 1.5cqw;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--signal);
+}
+
+.stage-headline {
+  margin: 2.1cqw 0 0;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 8.2cqw;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.stage-char {
+  display: inline-block;
+  opacity: 0;
+  white-space: pre;
+}
+
+.stage-body {
+  max-width: 38cqw;
+  margin: 2.1cqw 0 0;
+  overflow: hidden;
+  font-family: "Geist Variable", sans-serif;
+  font-size: 1.85cqw;
+  font-weight: 430;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  opacity: 0;
+}
